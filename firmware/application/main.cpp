@@ -23,6 +23,7 @@
 // Bitmaps generated with:
 // Gimp image > indexed colors (16), then "xxd -i *.bmp"
 
+//TODO: RDS PI_code and flags, multiple groups (sequence), date/time message
 //TEST: RDS
 //TEST: Imperial in whipcalc
 //TEST: Numbers

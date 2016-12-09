@@ -37,11 +37,11 @@ namespace rds {
 
 struct RDS_flags {
 	uint16_t PI_code;
-	bool TP;
 	uint8_t PTY;
+	uint8_t DI;
+	bool TP;
 	bool TA;
 	bool MS;
-	bool DI;
 };
 
 uint32_t makeblock(uint32_t blockdata, uint16_t offset);

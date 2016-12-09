@@ -278,7 +278,7 @@ TransmitterCodedMenuView::TransmitterCodedMenuView(NavigationView& nav) {
 		{ "Morse beacon", 			ui::Color::grey(),  	[&nav](){ nav.push<NotImplementedView>(); } },
 		{ "Nuoptix DTMF timecode", 	ui::Color::green(),		[&nav](){ nav.push<NuoptixView>(); } },
 		{ "OOK remote encoders", 	ui::Color::green(),		[&nav](){ nav.push<EncodersView>(); } },
-		{ "RDS",					ui::Color::orange(),	[&nav](){ nav.push<RDSView>(); } },
+		{ "RDS",					ui::Color::yellow(),	[&nav](){ nav.push<RDSView>(); } },
 		{ "TEDI/LCR AFSK", 			ui::Color::green(),  	[&nav](){ nav.push<LCRView>(); } },
 	} });
 	on_left = [&nav](){ nav.pop(); };

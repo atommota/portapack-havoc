@@ -82,9 +82,11 @@ void make_4A_group(uint32_t blocks[], const uint16_t PI_code, const bool TP, con
 	uint32_t L = 0;
 	uint32_t day_code;
 	
+	// 57723
+	
 	if ((month == 1) || (month == 2)) L = 1;
 	
-	day_code = 14956 + day + (uint32_t)((float)(year - L) * 365.25) + uint16_t(((month + 1) * L * 12) * 30.6001);
+	day_code = 14956 + day + (uint32_t)((float)(year - 1900 - L) * 365.25) + uint16_t((float)((month + 1) + L * 12) * 30.6001);
 	
 	blocks[0] = PI_code;
 	blocks[1] = (0x4 << 12) | (0 << 11) | (b2b(TP) << 10) | ((PTY & 0x1F) << 5) | ((day_code & 0x18000) >> 15);
